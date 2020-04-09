@@ -1,0 +1,85 @@
+<html>
+<head>
+
+<title>Galerija</title>
+
+<style>
+	h1{margin-left:auto;margin-right:auto;text-align:center;font-size:30px;}
+	
+	img.mala{width:128px;height:100px;}
+	
+	div.male{margin-left:auto;margin-right:auto;text-align:center;}
+	
+	ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+		background-color: black;
+		}
+
+		li {
+		float: left;
+		color:white;
+		text-align: center;
+		}
+
+		li a {
+	    display: block;
+		color: white;
+		text-align: center;
+		padding: 10px 30px;
+		text-decoration: none;
+		font-size:20px;
+		
+		}
+		li a:hover {
+		background-color: blue;
+		}
+		body{
+		background-color:#d2a479;
+		}
+		
+
+</style>
+	
+</head>
+<body>
+
+<nav>
+
+<ul>
+  <li><a href="pocetna.html">Pocetna</a></li>
+  <li><a href="galerija.html">Galerija</a></li>
+</ul>
+
+</nav>
+
+<br>
+
+<h1 id="ime">Hram_Svetog_Save</h1>
+
+</br>
+
+<img id="velika" src="Slike/Hram_Svetog_Save.jpg" style="width:650px; height:400px; display:block; margin-left:auto; margin-right:auto;"></div>
+
+</br>
+
+<div class="male">
+<img src="Slike/Hram_Svetog_Save.jpg" class="mala"  onclick="menjanje(src)">
+<img src="Slike/Kalemegdan.jpg" class="mala"  onclick="menjanje(src)">
+<img src="Slike/Avalski_toranj.jpg" class="mala" onclick="menjanje(src)">
+<img src="Slike/Petrovaradinska_tvrdjava.jpg" class="mala" onclick="menjanje(src)">
+<img src="Slike/Stara_planina.jpg" class="mala" onclick="menjanje(src)">
+</div>
+
+
+<script>
+function menjanje(x){
+ document.getElementById("velika").src=x;
+ document.getElementById("ime").innerHTML=x.slice(93,-4);
+}
+
+</script>
+</body>
+</html>

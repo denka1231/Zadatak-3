@@ -1,0 +1,100 @@
+<html>
+<head>
+
+<title>Kalemegdan</title>
+	
+	<style>
+			.glsl{width:49.8%;height:450px;}
+			p{
+			font-size:20px;
+			}
+			
+			ul {
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			overflow: hidden;
+			background-color: black;
+			}
+
+			li {
+			float: left;
+			color:white;
+			}
+
+			li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 10px 30px;
+			text-decoration: none;
+			font-size:20px;
+			}
+			
+			li a:hover {
+			background-color: green;
+			}
+
+			body{
+			background-color:black;
+			}
+			
+	</style>
+	
+</head>
+<body >
+
+
+<ul>
+  <li> <a href="pocetna.html">Pocetna</a> </li>
+  <li><a href="galerija.html">Galerija</a></li>
+</ul>
+
+<img src="Slike/slika1.jpg" class="glsl"  onmouseover="zvuk1()">
+<img src="Slike/slika2.jpg" class="glsl"  onmouseover="zvuk2()">
+
+<p id="PrekoTeksta" onmouseover="VelikaSlova()" onmouseout="MalaSlova()"> 📌Kalemegdan je najveći beogradski park.
+Istovremeno je najznačajniji kulturno-istorijski kompleks, u kojem dominira Beogradska tvrđava iznad ušća Save u Dunav. Naziv Kalemegdan odnosi se samo na prostorni plato oko tvrđave koji je osamdesetih godina 19. veka pretvoren u park. Plato je, dok je tvrđava bila glavno vojno uporište Beograda, služio da se neprijatelj osmotri i sačeka za borbu. Njegovo ime potiče od turskih reči kale (tvrđava) i mejdan (bojište). Turci su Kalemegdan nazivali i Fićir-bajir što znači „breg za razmišljanje“</p>
+
+<script>
+function VelikaSlova(){
+var povecaj=tekst.toUpperCase() ;
+document.getElementById("PrekoTeksta").innerHTML=povecaj;
+document.getElementById("PrekoTeksta").style.color="green"; 
+}
+function MalaSlova(){
+
+
+document.getElementById("PrekoTeksta").innerHTML=tekst;
+document.getElementById("PrekoTeksta").style.color="white";
+}
+
+
+var tekst = document.getElementById("PrekoTeksta").innerHTML;
+
+function zvuk1(){
+ var audio = new Audio('Zvukovi/zvuk1.mp3');
+ audio.play();
+}
+function zvuk2(){
+ var audio = new Audio('Zvukovi/zvuk2.mp3');
+ audio.play();
+}
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
